@@ -22,8 +22,22 @@ Recipe.init(
         directions: {
             type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
+        },
+        user_id: {
+            //user id
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                
+            }
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        modelName: 'recipes'
     }
-)
+);
 
 module.exports = Recipe;

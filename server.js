@@ -2,7 +2,7 @@ require('dotenv').config()
 const path = require('path')
 const express = require('express')
 const session = require('express-session')
-// const ehb = require('express-handlebars')
+const ehb = require('express-handlebars')
 const routes = require('./controllers')
 
 const sequelize = require('./config/connection')
@@ -11,7 +11,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const server = express()
 const PORT = process.env.PORT || 3001
 
-// const hb = ehb.create({ helpers })
+const hb = ehb.create()
 
 const sess = {
     secret: process.env.SECRET,
@@ -25,8 +25,8 @@ const sess = {
 
 server.use(session(sess))
 
-// server.engine('handlebars', hb.engine);
-// server.set('view engine', 'handlebars');
+server.engine('handlebars', hb.engine);
+server.set('view engine', 'handlebars');
 
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }));

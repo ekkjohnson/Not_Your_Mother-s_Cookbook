@@ -1,21 +1,18 @@
-// const sequelize = require('../config/connection');
-// const { Recipe } = require('../models');
+const sequelize = require('../config/connection');
+const { Recipe } = require('../models');
 
-// const recipeData = require('./recipeData.json')
+const recipeData = require('./recipeData.json')
 
-// const seedDatabase = async () => {
-//   await sequelize.sync({ force: true });
+const seedDatabase = async () => {
+  await sequelize.sync({ force: true });
 
-//   Recipe.create
+  await Recipe.bulkCreate(recipeData, {
+      individualHooks: true,
+      returning: true,
+  })
 
-//   for (const project of projectData) {
-//     await Project.create({
-//       ...project,
-//       user_id: users[Math.floor(Math.random() * users.length)].id,
-//     });
-//   }
+  
+  process.exit(0);
+};
 
-//   process.exit(0);
-// };
-
-// seedDatabase();
+seedDatabase();
