@@ -17,7 +17,7 @@ User.init(
             autoIncrement: true,
         },
         username: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         password: {
@@ -42,8 +42,8 @@ User.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        modelName: 'users'
+        modelName: 'user'
     }
 )
 
-module.exports = User
+module.exports = User;

@@ -6,6 +6,7 @@ Recipe.belongsTo(User, {
 })
 
 User.hasMany(Recipe, {
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 })
 
