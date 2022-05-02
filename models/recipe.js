@@ -16,19 +16,19 @@ Recipe.init(
             allowNull: false,
         },
         ingredients: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         directions: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         user_id: {
-            //user id
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                
+                model: 'users',
+                key: 'id'
             }
         }
     },
@@ -36,7 +36,8 @@ Recipe.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        modelName: 'recipes'
+        modelName: 'recipes',
+        underscored: true,
     }
 );
 
