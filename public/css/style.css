@@ -4,6 +4,6 @@
     margin-bottom: 10px;
 }
 
-/* #loginBtn {
-
-} */
+#username-login, #password-login {
+    border-radius: 5px;
+}
