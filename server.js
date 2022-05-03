@@ -1,17 +1,16 @@
 require('dotenv').config()
 const path = require('path')
 const express = require('express')
+const session = require('express-session')
 const ehb = require('express-handlebars')
 const routes = require('./controllers')
 
 const sequelize = require('./config/connection')
-
-const server = express()
 const PORT = process.env.PORT || 3001
 
+const server = express()
+
 const hb = ehb.create()
-
-
 server.engine('handlebars', hb.engine);
 server.set('view engine', 'handlebars');
 
