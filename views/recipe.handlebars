@@ -5,8 +5,12 @@
  <button class="btn btn-outline-primary" type="recipe">Add Recipe</button>
 <div class="container">{{recipeData}}</div>
 <section class="flex-row justify-center"></section>
-{{#each recipe as |recipe|}}
-    {{> recipe-details}}
+{{#each recipes as |recipe|}}
+    {{name}}
+    <br>
+    {{ingredients}}
+    <br>
+    {{directions}}
     {{/each}}
      <button class="btn btn-outline-primary" type="recipe">Add to Favorites</button>
 <div class="favorites">
