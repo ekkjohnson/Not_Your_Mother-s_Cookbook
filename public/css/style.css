@@ -43,4 +43,9 @@ background{
     border-radius: 5px; /* 5px rounded corners */
   }
 
-  
+  h1{
+     
+      text-shadow: 1px;
+    }
+
+    /* .animate__swing */
