@@ -4,8 +4,12 @@
 </div>
 <div class="container">{{recipeData}}</div>
 <section class="flex-row justify-center"></section>
-{{#each recipe as |recipe|}}
-    {{> recipe-details}}
+{{#each recipes as |recipe|}}
+    {{name}}
+    <br>
+    {{ingredients}}
+    <br>
+    {{directions}}
     {{/each}}
 !button[Add Recipe](./link-target.html)
 <div class="favorites">
