@@ -40,6 +40,7 @@ User.init(
             },
         },
         sequelize,
+        underscored: true,
         timestamps: false,
         freezeTableName: true,
         modelName: 'user'

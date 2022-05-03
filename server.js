@@ -8,6 +8,7 @@ const routes = require('./controllers')
 const session = require('express-session')
 
 const sequelize = require('./config/connection')
+const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const PORT = process.env.PORT || 3001
 const server = express()
 
@@ -27,8 +28,11 @@ server.use(express.static(path.join(__dirname, 'public')))
 server.use(session({
     secret: 'hk12h3k2fsc',
     resave: false,
-    saveUninitialized: false,
-    // cookie: { secure: true }
+    saveUninitialized: true,
+    cookie: {},
+    store: new SequelizeStore({
+        db: sequelize
+      })
   }))
 
 server.use(routes);
