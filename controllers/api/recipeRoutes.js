@@ -8,7 +8,7 @@ router.get('/', withAuth, async (req, res) => {
     const recipeData = await Recipe.findAll({
         include: [{
             model: User,
-            attributes: ['username']
+            attributes: ['username', 'id']
         }]
     })
 
@@ -16,7 +16,7 @@ router.get('/', withAuth, async (req, res) => {
 
     try {
         res.render('recipe', {
-            recipes
+            recipes,
         })
     } catch (err) {
         console.log(err);
