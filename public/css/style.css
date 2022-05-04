@@ -62,6 +62,7 @@ background{
       text-shadow: 1px;
       text-align: center;
       font-family: 'Permanent Marker', cursive;
+ animation-duration: 6s; 
     }
 
     h2{

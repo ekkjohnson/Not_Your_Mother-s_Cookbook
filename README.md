@@ -34,6 +34,9 @@ Carolyn:
 
 Elizabeth: Project Manager, recipe handlebars, recipe page layout, CSS styling, CSS animation, writing up ReadMe, pitch writer.
 
+Challanges we faced included working with passport and eventually giving up due to time constraints, file captilization issues with github, and the usual pull issues with github, but was better than project 1. 
+
+Successes we had included working and collaborating well as a team, staying on track with class pacing, and deploying app. 
 
 Demo: Show your stuff!
 
