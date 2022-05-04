@@ -61,3 +61,21 @@ background{
     }
 
     /* .animate__swing */
+
+
+
+
+
+    /* Recipe Display Cards */
+    .card-holder {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 1%;
+      padding: 0;
+    }
+    
