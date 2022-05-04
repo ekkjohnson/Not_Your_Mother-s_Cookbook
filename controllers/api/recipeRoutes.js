@@ -30,4 +30,17 @@ router.get('/add', async(req, res)=>{
     }
 })
 
+router.post('/add', async (req, res) => {
+    try {
+        
+        console.log(req);
+        
+        const newRecipe = await Recipe.create(req.body)
+        res.json(newRecipe)
+
+    } catch (err) {
+        res.json(err)
+    }
+})
+
 module.exports = router;
