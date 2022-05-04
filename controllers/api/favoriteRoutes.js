@@ -9,8 +9,24 @@ router.post('/', async (req, res) => {
         user_id: req.body.user_id,
         recipe_id: req.body.recipe_id
     })
-    console.log(favoriteData);
+    // console.log(favoriteData);
     res.json(favoriteData)
+})
+
+router.get('/', async (req, res) => {
+    const favoriteData = await Favorite.findAll({
+        include: [{
+            model: User,
+            attributes: ['id', 'username']
+        },
+        {
+            model: Recipe,
+            attributes: ['id', 'name', 'ingredients', 'description']
+        }
+    ]
+    })
+    const favorites = favoriteData.map((favorite) => favorite.get({ plain: true}))
+    
 })
 
 
