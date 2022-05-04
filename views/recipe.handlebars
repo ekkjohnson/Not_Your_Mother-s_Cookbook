@@ -2,7 +2,7 @@
 <div class="card">
 <h3>Recipes</h3>
 </div>
- <button class="btn btn-outline-primary" type="recipe">Add Recipe</button>
+<button class="btn btn-outline-primary" id="add-recipe-btn" type="recipe">Add Recipe</button>
 <div class="container">{{recipeData}}</div>
 <section class="flex-row justify-center"></section>
 {{#each recipes as |recipe|}}
@@ -22,3 +22,5 @@
     {{> favorite-details}}
     {{/each}}
 </div>
+
+<script src="/js/recipe.js"></script>
