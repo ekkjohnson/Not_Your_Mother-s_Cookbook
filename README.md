@@ -1,19 +1,3 @@
-# Not_Your_Mother-s_Cookbook
-
-Use this project presentation template to address the following:
-
-Elevator pitch: a one minute description of your application
-
-Concept: What is your user story? What was your motivation for development?
-
-Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-Demo: Show your stuff!
-
-Directions for Future Development
-
-Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MySQL on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
 # Not Your Mother's Cookbook
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)<br>
   ## Table of Contents:
@@ -26,7 +10,44 @@ Links to the deployed application and the GitHub repository. Use the Guide to De
   [Questions](#questions)<br>
 
   # Description
-  A<br>
+ Elevator pitch: a one minute description of your application
+
+Do you struggle to decide what to cook or remember your best meal ideas? You could use a cookbook, like the one sitting in your mom's kitchen cabinet, but those are old and outdated. You need something to keep up with you and your busy life in the modern world. An online cookbook. A place to add your recipes, your way. 
+
+Not Your Mother's Cookbook is just that. It is an online cookbook you can log in to and save your old favorites or newly discovered recipes. Just type the recipe in and, boom! Ready to go for easy future use. 
+
+Simple, modern, and easy to use. It's better than your mother's, trust us. 
+
+Concept: What is your user story? What was your motivation for development?
+
+Our motivation for development was to have an easy to access cookbook. In the modern world, no one wants to use cookbooks anymore. If you want to make something you would search the recipe online. But then, how would you save it? So we created "Not Your Mother's Cookbook" as an online cookbook you can tailor to recipes you want to add and save for future use. 
+
+Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+
+Technologies we used included handlebars, javascript, html, css, bootstrap, animate css, google fonts, sql, sequelize, and heroku.
+
+Roles were broken down as follows:
+
+Bret:
+
+Carolyn:
+
+Elizabeth: Project Manager, recipe handlebars, recipe page layout, CSS styling, CSS animation, writing up ReadMe, pitch writer.
+
+Challanges we faced included working with passport and eventually giving up due to time constraints, file captilization issues with github, and the usual pull issues with github, but was better than project 1. 
+
+Successes we had included working and collaborating well as a team, staying on track with class pacing, and deploying app. 
+
+Demo: Show your stuff!
+
+Directions for Future Development
+
+Directions for the future would be to sort the user input recipe cards alphabetically and adding a search function. Another idea would be to link pinterest for an easy to save function for recipe ideas. 
+
+Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MySQL on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
+
+https://github.com/ekkjohnson/Not_Your_Mother-s_Cookbook
+<br>
   # Installation
   To install dependencies use: npm init --y  followed by: npm install 
   # Usage
@@ -38,7 +59,7 @@ Links to the deployed application and the GitHub repository. Use the Guide to De
   # License
   [The MIT license](https://opensource.org/licenses/MIT)
   
-    Copyright 2022 Bret Banger
+    Copyright 2022
     
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     

@@ -1,6 +1,17 @@
 background{
     color: black;
 }
+.recipe_input{
+    width: 80vh;
+    text-align: center;
+    font-size: x-large;
+   width:fit-content;
+}
+
+.recipe_form{
+    width: 50 vh;
+    justify-content: center;
+}
 
 #formSection, #signupForm {
     color: white;
@@ -39,6 +50,9 @@ background{
 
   .row{
     text-align: center;
+    vertical-align: 50vh;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s; 
@@ -58,24 +72,18 @@ background{
   h1{
      
       text-shadow: 1px;
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
+ animation-duration: 6s; 
     }
 
-    /* .animate__swing */
-
-
-
-
-
-    /* Recipe Display Cards */
-    .card-holder {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+    h2{
+        text-shadow: 1px;
+        font-weight: bold;
+        text-align: center;  
+        font-family: 'Montserrat', sans-serif;
     }
-    .recipe-card {
-      width: 30%;
-      margin: 1%;
-      padding: 0;
+
+    *{
+        font-family: 'Montserrat', sans-serif;
     }
-    
