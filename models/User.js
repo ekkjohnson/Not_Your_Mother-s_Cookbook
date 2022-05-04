@@ -35,11 +35,12 @@ User.init(
                 return newUser
             },
             beforeUpdate: async (updatedUser) => {
-                updatedUser.password = await bc.hash(updatedUser.password, 10)
+                updatedUser.password = await bc.hash(updatedUser.password, 8)
                 return updatedUser
             },
         },
         sequelize,
+        underscored: true,
         timestamps: false,
         freezeTableName: true,
         modelName: 'user'
