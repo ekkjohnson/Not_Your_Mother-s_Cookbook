@@ -1,3 +1,4 @@
+const { add } = require('lodash');
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
@@ -41,3 +42,4 @@ Recipe.init(
 );
 
 module.exports = Recipe;
+

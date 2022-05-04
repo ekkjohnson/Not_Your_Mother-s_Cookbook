@@ -1,7 +1,8 @@
 <h1>Not Your Mother's Cookbook</h1>
-<div class="recipes"></div>
+<div class="card">
 <h3>Recipes</h3>
 </div>
+ <button class="btn btn-outline-primary" type="recipe">Add Recipe</button>
 <div class="container">{{recipeData}}</div>
 <section class="flex-row justify-center"></section>
 {{#each recipes as |recipe|}}
@@ -11,12 +12,13 @@
     <br>
     {{directions}}
     {{/each}}
-!button[Add Recipe](./link-target.html)
-<div class="favorites">
+    </div>
+  <button class="btn btn-outline-primary" type="recipe">Add to Favorites</button>
+<div class="card">
 <h4>Favorites</h4>
-</div>
 <div class="container">{{favoritesData}}</div>
 <section class="flex-row justify-center"></section>
 {{#each favorite as |favorite|}}
     {{> favorite-details}}
     {{/each}}
+</div>

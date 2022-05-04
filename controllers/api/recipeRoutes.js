@@ -22,6 +22,12 @@ router.get('/', withAuth, async (req, res) => {
         console.log(err);
     }
 })
-
+router.get('/add', async(req, res)=>{
+    try{
+        res.render('addRecipe')
+    } catch (err){
+        console.log(err);
+    }
+})
 
 module.exports = router;
