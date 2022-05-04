@@ -26,6 +26,10 @@ User.init(
             validate: {
                 len: [8]
             },
+        },
+        favorite: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         }
     },
     {
