@@ -1,12 +1,21 @@
 const router = require('express').Router()
 const {User} = require('../../models')
 const bc = require('bcrypt')
+const withAuth = require('../../utils/auth')
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+  try {
+    res.redirect('/api/recipes')
+  } catch (err) {
+    res.json(err)
+  }
+})
+
+router.get('/login', async (req, res) => {
   try {
       res.render('login')
   } catch (err) {
-      console.log(err);
+      res.json(err)
   }
 })
 
@@ -24,9 +33,9 @@ router.post('/login', async (req, res) => {
           .json({ message: 'Incorrect email or password. Please try again!' });
         return;
       }
-  
+
       const validPassword = await dbUserData.checkPassword(req.body.password);
-  
+      
       if (!validPassword) {
         res
           .status(400)
@@ -40,14 +49,13 @@ router.post('/login', async (req, res) => {
       res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
       });
     } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
+      res.json(err)
     }
   });
 
 router.post('/register', async (req, res) => {
   try {
-
+    console.log(req.body.username);
     const newUser = await User.create({
       username: req.body.username,
       password: req.body.password
@@ -58,9 +66,6 @@ router.post('/register', async (req, res) => {
       res.status(200).json({ user: newUser, message: 'You are now logged in!' });
       });
 
-    // if (newUser) {
-    //   res.json(newUser)
-    // }
 
     
   } catch (err) {
