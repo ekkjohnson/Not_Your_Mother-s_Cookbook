@@ -2,6 +2,18 @@ background{
     color: black;
 }
 
+#formSection, #signupForm {
+    color: white;
+}
+
+#formSection {
+  background-color: #0a0908;
+}
+
+#signupForm {
+  background-color: #22333b;
+}
+
 #password-login, #password-signup {
     margin-left: 5px;
     margin-top: 10px;
