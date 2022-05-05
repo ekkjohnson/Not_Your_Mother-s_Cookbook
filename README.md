@@ -28,9 +28,9 @@ Technologies we used included handlebars, javascript, html, css, bootstrap, anim
 
 Roles were broken down as follows:
 
-Bret:
+Bret:  built server, database, models, seed data, and routes. Connected front-end and back-end. Assisted with handlebars as well.
 
-Carolyn:
+Carolyn: Login handlebars, login layout and CSS, some login routing.
 
 Elizabeth: Project Manager, recipe handlebars, recipe page layout, CSS styling, CSS animation, writing up ReadMe, pitch writer.
 
