@@ -8,6 +8,11 @@
 }
 * {
   font-family: 'Kalam', cursive;
+  background-color: var(--dark);
+}
+
+body{
+    background-color: var(--dark);
 }
 #title{
     color: var(--light);
