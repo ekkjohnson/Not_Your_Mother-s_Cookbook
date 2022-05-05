@@ -90,22 +90,10 @@ h2 {
 
 /* Recipe Page Styling */
 
-.recipe-page-header {
-  display: flex;
-}
-.recipe-title {
-  width: 65vw;
-  display: flex;
-  justify-content: space-evenly;
-}
-.favorite-title {
-  width: 35vw;
-  display: flex;
-  justify-content: center;
-}
 .recipe-main-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   background-color: var(--dark);
 }
 /* Right Side - Recipe Side */
@@ -125,10 +113,17 @@ h2 {
   flex-wrap: wrap;
   flex-direction: column;
   border: 1px solid white;
+  justify-content: start;
 }
 .favorite-menu-item {
+  width: 10vw;
+  border: 1px solid red;
   display: flex;
 
+}
+.remove-button {
+  width: 20%;
+  text-align: center;
 }
 /* Card Styling */
 
@@ -143,4 +138,9 @@ h2 {
   display: flex;
   justify-content: space-between;
   background-color: var(--tan-dark);
+}
+.favorite-button {
+  border-radius: 50%;
+  background-color: var(--tan-dark);
+  border: none;
 }

@@ -1,24 +1,18 @@
 {{!-- Open Recipe Main Content --}}
-<div class="recipe-page-header">
-  <div class="recipe-title">
-    <h1>All Recipes</h1>
-  </div>
-  <div class="favorite-title">
-    <h1>Favorite Recipes</h1>
-  </div>
-</div>
+
 <div class="recipe-main-content">
   {{!-- Favorites Side --}}
   <section class="favorite-side-bar">
-    <ol class="favorite-links">
+
   <button class="btn btn-success" id="add-recipe-btn" type="recipe">Add Recipe</button>
      {{#each favs as |favorite|}}
      <div class="favorite-menu-item">
-      <a href="#item-card-{{id}}" class="link"><button>{{name}}</button></a>
-      <button class="remove-button btn btn-danger" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
+      <a id="item-{{id}}" href="#item-card-{{id}}" class="link"><button>
+        {{name}}
+      <button class="remove-button btn" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
+      </button></a>
+
      </div>
-
-
   {{/each}}
   </section>
   {{!-- Recipe Side --}}
@@ -28,7 +22,7 @@
 {{#each recipes as |recipe|}}
   <div class="recipe-card" id="item-card-{{id}}">
   <div class="card-header">
-    <h1>{{name}}</h1><button class="favorite-button btn btn-success" data-recipeid='{{id}}'>⭐</button>
+    <h1>{{name}}</h1><button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>⭐</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">

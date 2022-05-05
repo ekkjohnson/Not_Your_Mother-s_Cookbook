@@ -1,3 +1,4 @@
+
 const favoriteButtons = document.querySelectorAll('.favorite-button')
 const removeButtons = document.querySelectorAll('.remove-button')
 
@@ -6,10 +7,11 @@ const addRecipePage = async () => {
 }
 
 const favoriteRecipe = async (e) => {
-
     const recipe_id = e.target.dataset.recipeid
-
-    if (recipe_id) {
+    const alreadyFavorite = document.getElementById(`item-${recipe_id}`)
+    console.log(alreadyFavorite);
+    
+    if (recipe_id && !alreadyFavorite) {
         const newFavorite = await fetch('/api/favorites', {
             method: 'POST',
             body: JSON.stringify({ recipe_id }),
@@ -29,7 +31,7 @@ const removeFavorite = async (e) => {
             body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        // document.location.replace('/api/recipes')
+        document.location.replace('/api/recipes')
     }   
     } catch (err) {
         console.error(err);
