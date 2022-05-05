@@ -9,6 +9,8 @@
   [License](#license)<br>
   [Questions](#questions)<br>
 
+![Screen Shot 2022-05-05 at 1 33 09 PM](https://user-images.githubusercontent.com/97856843/166995258-40923859-27d5-47c1-abf2-ee13fb7a0ca5.png)
+
   # Description
  Elevator pitch: a one minute description of your application
 
@@ -45,7 +47,7 @@ Directions for Future Development
 Directions for the future would be to sort the user input recipe cards alphabetically and adding a search function. Another idea would be to link pinterest for an easy to save function for recipe ideas. 
 
 Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MySQL on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
+https://not-your-mothers-cookbook.herokuapp.com/
 https://github.com/ekkjohnson/Not_Your_Mother-s_Cookbook
 <br>
   # Installation
