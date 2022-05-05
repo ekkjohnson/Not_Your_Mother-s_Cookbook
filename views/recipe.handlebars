@@ -29,9 +29,13 @@
 {{/each}}
 </section>
 {{!-- Favorites Side --}}
-  <section class="favorite-card-holder">
-  {{#each favs as |favorite|}}
-    <div class="recipe-card">
+  <section class="favorite-side-bar">
+    <ol class="favorite-links">
+     {{#each favs as |favorite|}}
+      <li><a href="#"></a></li>
+
+    </ol>
+  
     <div class="card-header">
       <h1>{{name}}</h1><button class="remove-button btn btn-danger" data-user='{{user}}' data-recipeid='{{id}}'>Remove Favorite</button>
     </div>

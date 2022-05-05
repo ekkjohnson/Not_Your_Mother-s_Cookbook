@@ -34,7 +34,7 @@ router.get('/', withAuth, async (req, res) => {
             favs
         })
     } catch (err) {
-        console.log(err);
+        res.json(err);
     }
 })
 
@@ -42,7 +42,7 @@ router.get('/add', async(req, res)=>{
     try{
         res.render('addRecipe')
     } catch (err){
-        console.log(err);
+        res.json(err);
     }
 })
 
@@ -53,7 +53,6 @@ router.post('/add', async (req, res) => {
             ...req.body,
             user_id: req.session.user_id
         })
-        console.log(newRecipe);
         res.json(newRecipe)
 
     } catch (err) {

@@ -55,7 +55,6 @@ router.post('/login', async (req, res) => {
 
 router.post('/register', async (req, res) => {
   try {
-    console.log(req.body.username);
     const newUser = await User.create({
       username: req.body.username,
       password: req.body.password

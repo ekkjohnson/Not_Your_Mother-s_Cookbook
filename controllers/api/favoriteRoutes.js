@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     const removeFavorite = await Favorite.destroy({
         where: {
+            user_id: req.session.user_id,
             recipe_id: req.body.recipe_id
         }
     })
