@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
         }
         res.redirect('/api/recipes')
     } catch (err) {
-        console.log(err);
+        res.json(err)
     }
 })
 
