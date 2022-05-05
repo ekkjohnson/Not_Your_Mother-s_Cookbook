@@ -1,15 +1,22 @@
-<div class="recipe-title">
-<h3>Recipes</h3>
-<button class="btn btn-outline-primary" id="add-recipe-btn" type="recipe">Add Recipe</button>
-</div>
 {{!-- Open Recipe Main Content --}}
+<div class="recipe-page-header">
+  <div class="recipe-title">
+    <h1>All Recipes</h1>
+  </div>
+  <div class="favorite-title">
+    <h1>Favorite Recipes</h1>
+  </div>
+</div>
 <div class="recipe-main-content">
   {{!-- Recipe Side --}}
+  <div class="button-bar">
+      <button class="btn btn-success" id="add-recipe-btn" type="recipe">Add Recipe</button>
+  </div>
   <section class="recipe-card-holder">
 {{#each recipes as |recipe|}}
-  <div class="card recipe-card">
+  <div class="recipe-card">
   <div class="card-header">
-    {{name}}<button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>Add Favorite</button>
+    <h1>{{name}}</h1><button class="favorite-button btn btn-success" data-userid='{{user.id}}' data-recipeid='{{id}}'>Add Favorite</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
@@ -24,9 +31,9 @@
 {{!-- Favorites Side --}}
   <section class="favorite-card-holder">
   {{#each favs as |favorite|}}
-    <div class="card recipe-card">
+    <div class="recipe-card">
     <div class="card-header">
-      {{name}}<button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>Remove Favorite</button>
+      <h1>{{name}}</h1><button class="remove-button btn btn-danger" data-userid='{{user.id}}' data-recipeid='{{id}}'>Remove Favorite</button>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
