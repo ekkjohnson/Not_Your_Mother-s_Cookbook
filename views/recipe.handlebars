@@ -1,4 +1,3 @@
-<h1>Not Your Mother's Cookbook</h1>
 <div class="card">
 <h3>Recipes</h3>
 </div>
@@ -20,26 +19,24 @@
 </div>
 {{/each}}
 </section>
-</div>
-  <button class="btn btn-outline-primary" type="recipe">Add to Favorites</button>
-<div class="card">
-<h4>Favorites</h4>
-<div class="container">{{favData}}</div>
-<section class="flex-row justify-center"></section>
-{{#if favorite}}
-      <div class="card recipe-card">
+<section class="flex-row justify-center card-holder">
+{{#each favs as |favorite|}}
+  <div class="card recipe-card">
   <div class="card-header">
-    {{name}}
+    {{name}}{{id}} <button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>favorite</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <p>Ingredients: {{ingredients}}</p>
       <p>Directions: {{directions}}</p>
-      <footer class="blockquote-footer">Submitted by: {{user.username}}</footer>
+      <footer class="blockquote-footer">Submitted by: {{user.username}}{{user.id}}</footer>
     </blockquote>
   </div>
 </div>
-{{/if}}
+{{/each}}
+</section>
+</div>
+ 
 </div>
 
 <script src="/js/recipe.js"></script>
