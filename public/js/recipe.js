@@ -22,9 +22,8 @@ const favoriteRecipe = async (e) => {
 }
 
 const removeFavorite = async (e) => {
-    try {
+    
     const recipe_id = e.target.dataset.recipeid
-
     if (recipe_id) {
         const removing = await fetch(`/api/favorites/${recipe_id}`, {
             method: 'DELETE',
@@ -32,12 +31,9 @@ const removeFavorite = async (e) => {
             headers: { 'Content-Type': 'application/json' }
         })
         return document.location.replace('/api/recipes')
-    }   
-    } catch (err) {
-        console.error(err);
+    } else {
+        return console.error('Failed to remove favorite.');
     }
-    
-
 }
 
 for (let i = 0; i < favoriteButtons.length; i++) {
