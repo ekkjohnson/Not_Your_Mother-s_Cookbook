@@ -53,7 +53,7 @@ router.post('/add', async (req, res) => {
             ...req.body,
             user_id: req.session.user_id
         })
-        res.json(newRecipe)
+        res.json(newRecipe).redirect('/api/recipes')
 
     } catch (err) {
         res.json(err)
