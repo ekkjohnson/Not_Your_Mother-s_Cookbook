@@ -12,13 +12,12 @@
 }
 
 header {
-  padding-top: 50px;
   background-color: var(--darkest);
   color: var(--tan-light);
 }
 
 #user-logout {
-  border: 2px solid #22333b;
+  border: 2px solid #0a0908;
   color: #ccc5b9;
   background-color: #22333b;
 }
@@ -35,7 +34,7 @@ header {
   justify-content: center;
 }
 
-.loginBackground {
+.loginBackground, .addRecipeBackground {
   height: 100vh;
   background-color: var(--darkest);
 }
@@ -50,6 +49,11 @@ header {
   margin-left: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#username-login, #password-login, #username-signup, #password-signup, #dish_name, #ingredients, #directions {
+  background-color: rgba(0,0,0,.5);
+  color: white;
 }
 
 /* On mouse-over, add a deeper shadow */

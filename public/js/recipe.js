@@ -1,6 +1,7 @@
 
 const favoriteButtons = document.querySelectorAll('.favorite-button')
 const removeButtons = document.querySelectorAll('.remove-button')
+const deleteButtons = document.querySelectorAll('.delete-button')
 
 const addRecipePage = async () => {
     document.location.replace('/api/recipes/add')
@@ -17,7 +18,7 @@ const favoriteRecipe = async (e) => {
             body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        return document.location.replace('/api/recipes')
+        return document.location.reload('/api/recipes')
     }
 }
 
@@ -30,10 +31,28 @@ const removeFavorite = async (e) => {
             body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        return document.location.replace('/api/recipes')
+        return document.location.reload('/api/recipes')
     } else {
         return console.error('Failed to remove favorite.');
     }
+}
+
+const deleteRecipe = async (e) => {
+    const recipe_id = e.target.dataset.recipeid
+    if (recipe_id) {
+        const deleting = await fetch(`/api/recipes/${recipe_id}`, {
+            method: 'DELETE',
+            body: JSON.stringify({ recipe_id }),
+            headers: { 'Content-Type': 'application/json' }
+        })
+        return document.location.reload('/api/recipes')
+    } else {
+        return console.error('Failed to delete recipe.')
+    }
+}
+
+for (let i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].addEventListener('click', deleteRecipe)   
 }
 
 for (let i = 0; i < favoriteButtons.length; i++) {
