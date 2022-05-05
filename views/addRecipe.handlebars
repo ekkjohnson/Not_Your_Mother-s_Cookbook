@@ -1,25 +1,30 @@
+<section class="addRecipeBackground">
+<div class="row" style="background-image: url(/images/login-background.jpg);
+                       background-size: 100%;
+                       align-items: center;
+                       justify-content: center;">
 
-<div class="row">
   <div class="col-md-6">
-    <h2>Add Your Recipe</h2>
+    <h2 style="font-family: 'Kalam'; color: white">Add Your Recipe</h2>
 
     <form class="recipe-form">
       <div class="form-group">
-        <label class="recipe_input" for="dish_name">Dish Name:</label>
+        <label class="recipe_input" for="dish_name" style="color: white">Dish Name:</label>
         <input class="form-input" type="text" id="dish_name" />
       </div>
       <div class="form-group">
-        <label class="recipe_input" for="ingredients">Ingredients:</label>
+        <label class="recipe_input" for="ingredients" style="color: white">Ingredients:</label>
         <input class="form-input" type="ingredients" id="ingredients" />
       </div>
        <div class="form-group">
-        <label class="recipe_input" for="directions">Directions:</label>
+        <label class="recipe_input" for="directions" style="color: white">Directions:</label>
         <input class="form-input" type="directions" id="directions" />
       </div>
+      <br>
       <div class="form-group">
-        <button class="btn btn-outline-primary" type="submit">Add</button>
+        <button class="btn btn-secondary" type="submit">Add</button>
       </div>
     </form>
   </div>
-
+</section>
   <script src="/js/recipe-form.js"></script>

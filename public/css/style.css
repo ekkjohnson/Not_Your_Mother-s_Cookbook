@@ -6,6 +6,7 @@
   --pale-silver: #ccc5b9;
   --light: #f2f4f3;
 }
+
 * {
   font-family: 'Kalam', cursive;
 }
@@ -17,9 +18,15 @@
 
 
 header {
-  background-color: var(--dark);
+  background-color: var(--darkest);
   color: var(--tan-light);
   padding-top: 5%;
+}
+
+#user-logout {
+  border: 2px solid #0a0908;
+  color: #ccc5b9;
+  background-color: #22333b;
 }
 
 .recipe_input {
@@ -34,11 +41,26 @@ header {
   justify-content: center;
 }
 
+.loginBackground, .addRecipeBackground {
+  height: 100vh;
+  background-color: var(--darkest);
+}
+
+#loginForm, #signupForm {
+  font-family: 'Kalam';
+  color: white;
+}
+
 #password-login,
 #password-signup {
   margin-left: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#username-login, #password-login, #username-signup, #password-signup, #dish_name, #ingredients, #directions {
+  background-color: rgba(0,0,0,.5);
+  color: white;
 }
 
 /* On mouse-over, add a deeper shadow */

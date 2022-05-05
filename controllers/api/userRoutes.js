@@ -63,9 +63,6 @@ router.post('/register', async (req, res) => {
       req.session.logged_in = true;
       res.status(200).json({ user: newUser, message: 'You are now logged in!' });
       });
-
-
-    
   } catch (err) {
     res.json(err)
   }
