@@ -1,13 +1,28 @@
-<h1>Not Your Mother's Cookbook</h1>
-<div class="card">
-<h3>Recipes</h3>
-</div>
-<button class="btn btn-outline-primary" id="add-recipe-btn" type="recipe">Add Recipe</button>
-<div class="container">{{recipeData}}</div>
-<section class="flex-row justify-center card-holder">
+{{!-- Open Recipe Main Content --}}
+
+<div class="recipe-main-content">
+  {{!-- Favorites Side --}}
+  <section class="favorite-side-bar">
+
+  <button class="btn btn-success" id="add-recipe-btn" type="recipe">Add Recipe</button>
+     {{#each favs as |favorite|}}
+     <div class="favorite-menu-item">
+      <a id="item-{{id}}" href="#item-card-{{id}}" class="link"><button class="btn favorite-link">
+        {{name}}
+      <button class="remove-button btn" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
+      </button></a>
+
+     </div>
+  {{/each}}
+  </section>
+  {{!-- Recipe Side --}}
+
+
+  <section class="recipe-card-holder">
 {{#each recipes as |recipe|}}
-  <div class="card recipe-card">
+  <div class="recipe-card" id="item-card-{{id}}">
   <div class="card-header">
+<<<<<<< HEAD
     {{name}}{{id}} <button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>favorite</button>
   </div>
   <div class="card-body">
@@ -37,6 +52,9 @@
       <div class="card recipe-card">
   <div class="card-header">
     {{name}}
+=======
+    <h1>{{name}}</h1><button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>⭐</button>
+>>>>>>> main
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
@@ -46,7 +64,15 @@
     </blockquote>
   </div>
 </div>
+<<<<<<< HEAD
 {{/if}}
 </div>
+=======
+{{/each}}
+</section>
+
+  {{!-- Closing Recipe Main Content --}}
+</div> 
+>>>>>>> main
 
 <script src="/js/recipe.js"></script>

@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Recipe, User } = require('../../models')
+const { Recipe, User, Favorite } = require('../../models')
 const withAuth = require('../../utils/auth')
 
 
@@ -11,22 +11,38 @@ router.get('/', withAuth, async (req, res) => {
             attributes: ['username', 'id']
         }]
     })
-
+    const favoriteData = await Favorite.findAll()
+    const favorites = favoriteData.map((favorite) => favorite.get({ plain: true}))
+    const favoriteList = []
+    for (let i = 0; i < favorites.length; i++) {
+        if (favorites[i].user_id == req.session.user_id) {
+            const recipe = await Recipe.findByPk(favorites[i].recipe_id, {
+                include: [{
+                    model: User,
+                    attributes: ['username', 'id']
+                }]
+            })
+            favoriteList.push(recipe)
+        }
+    }
+    const favs = favoriteList.map(fav => fav.get({ plain: true}))
     const recipes = recipeData.map((project) => project.get({ plain: true }))
 
     try {
         res.render('recipe', {
             recipes,
+            favs
         })
     } catch (err) {
-        console.log(err);
+        res.json(err);
     }
 })
+
 router.get('/add', async(req, res)=>{
     try{
         res.render('addRecipe')
     } catch (err){
-        console.log(err);
+        res.json(err);
     }
 })
 
@@ -37,7 +53,6 @@ router.post('/add', async (req, res) => {
             ...req.body,
             user_id: req.session.user_id
         })
-        console.log(newRecipe);
         res.json(newRecipe)
 
     } catch (err) {
