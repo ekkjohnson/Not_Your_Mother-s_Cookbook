@@ -19,6 +19,7 @@
 header {
   background-color: var(--dark);
   color: var(--tan-light);
+  padding-top: 5%;
 }
 
 .recipe_input {
@@ -128,7 +129,7 @@ h2 {
 }
 .favorite-menu-item {
   width: 15vw;
-  border: 1px solid red;
+  border: 1px var(--dark);
   display: flex;
   justify-content: space-between;
 
@@ -145,19 +146,22 @@ h2 {
   text-align: center;
 }
 /* Card Styling */
-
+.recipePage{
+    height: 100vh;
+    background-color: var(--dark)
+}
 .recipe-card {
   width: 30vw;
   border: 5px solid var(--darkest);
   margin: 10px;
-  height: 300px;
+  height: auto;
   background-color: var(--pale-silver);
   color: var(--darkest);
 }
 .card-header {
   display: flex;
   justify-content: space-between;
-  background-color: var(--dark);
+  background-color: var(--darkest);
 }
 .favorite-button {
   border-radius: 50%;
@@ -165,6 +169,17 @@ h2 {
   border: none;
 }
 
-.btn{
-    background-color: var(--light);
+#add-recipe-btn{ 
+    color: var(--light);
+    background-color: var(--darkest);
+    border: var(--darkest);
+}
+
+.removeBtn{
+    background-color: var(--tan-light);  
+
+}
+#user-logout{
+    color: var(--light);
+   border-color: var(--light);
 }

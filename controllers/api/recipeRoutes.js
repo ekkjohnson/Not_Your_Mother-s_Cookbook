@@ -60,4 +60,18 @@ router.post('/add', async (req, res) => {
     }
 })
 
+router.delete('/:id', async (req, res) => {
+    try {
+        const deletedRecipe = await Recipe.destroy({
+            where: {
+                id: req.body.recipe_id,
+                user_id: req.session.user_id
+            }
+        })
+        res.json(deletedRecipe)
+    } catch (err) {
+        res.json(err)
+    }
+})
+
 module.exports = router;
