@@ -6,13 +6,21 @@
   --pale-silver: #ccc5b9;
   --light: #f2f4f3;
 }
+
 * {
   font-family: 'Kalam', cursive;
 }
 
 header {
-  background-color: var(--dark);
+  padding-top: 50px;
+  background-color: var(--darkest);
   color: var(--tan-light);
+}
+
+#user-logout {
+  border: 2px solid #22333b;
+  color: #ccc5b9;
+  background-color: #22333b;
 }
 
 .recipe_input {
@@ -25,6 +33,16 @@ header {
 .recipe_form {
   width: 50 vh;
   justify-content: center;
+}
+
+.loginBackground {
+  height: 100vh;
+  background-color: var(--darkest);
+}
+
+#loginForm, #signupForm {
+  font-family: 'Kalam';
+  color: white;
 }
 
 #password-login,

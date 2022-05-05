@@ -22,39 +22,7 @@
 {{#each recipes as |recipe|}}
   <div class="recipe-card" id="item-card-{{id}}">
   <div class="card-header">
-<<<<<<< HEAD
-    {{name}}{{id}} <button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>favorite</button>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Ingredients: {{ingredients}}</p>
-      <p>Directions: {{directions}}</p>
-      <footer class="blockquote-footer">Submitted by: {{user.username}}{{user.id}}</footer>
-    </blockquote>
-  </div>
-</div>
-{{/each}}
-</section>
-</div>
-  <button class="btn btn-outline-primary" type="recipe">Add to Favorites</button>
-<div class="card">
-{{!-- <h4>Favorites</h4>
-<div class="container">{{favoritesData}}</div>
-<section class="flex-row justify-center"></section>
-{{#each favorite as |favorite|}}
-    {{> favorite-details}}
-    {{/each}}
-</div> --}}
-<h4>Favorites</h4>
-<div class="container">{{favData}}</div>
-<section class="flex-row justify-center"></section>
-{{#if favorite}}
-      <div class="card recipe-card">
-  <div class="card-header">
-    {{name}}
-=======
     <h1>{{name}}</h1><button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>⭐</button>
->>>>>>> main
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
@@ -64,15 +32,10 @@
     </blockquote>
   </div>
 </div>
-<<<<<<< HEAD
-{{/if}}
-</div>
-=======
 {{/each}}
 </section>
 
   {{!-- Closing Recipe Main Content --}}
 </div> 
->>>>>>> main
 
 <script src="/js/recipe.js"></script>
