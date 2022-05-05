@@ -129,11 +129,11 @@ h2 {
 }
 /* Right Side - Recipe Side */
 .recipe-card-holder {
-  width: 64vw;
+  width: 80vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
  color: var(--dark);
   
 }
