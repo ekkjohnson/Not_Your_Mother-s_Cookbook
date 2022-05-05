@@ -9,7 +9,7 @@
      <div class="favorite-menu-item">
       <a id="item-{{id}}" href="#item-card-{{id}}" class="link"><button class="btn favorite-link">
         {{name}}
-      <button class="remove-button btn" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
+      <button class="removeBtn" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
       </button></a>
 
      </div>
@@ -22,7 +22,7 @@
 {{#each recipes as |recipe|}}
   <div class="recipe-card" id="item-card-{{id}}">
   <div class="card-header">
-    <h1>{{name}}</h1><button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>⭐</button>
+    <h1 class="name">{{name}}</h1><button class="btn" data-recipeid='{{id}}'>⭐</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">

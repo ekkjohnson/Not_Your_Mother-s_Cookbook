@@ -9,6 +9,12 @@
 * {
   font-family: 'Kalam', cursive;
 }
+#title{
+    color: var(--light);
+   border: var(--darkest);
+   text-decoration: underline;
+}
+
 
 header {
   background-color: var(--dark);
@@ -77,6 +83,7 @@ h1 {
   text-align: center;
   font-family: "Permanent Marker", cursive;
   animation-duration: 6s;
+color: var(--dark)
 }
 
 h2 {
@@ -95,6 +102,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: var(--dark);
+  height: 70vh;
 }
 /* Right Side - Recipe Side */
 .recipe-card-holder {
@@ -103,6 +111,8 @@ h2 {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: start;
+ color: var(--dark);
+  
 }
 
 
@@ -138,18 +148,23 @@ h2 {
 
 .recipe-card {
   width: 30vw;
-  border: 1px solid var(--darkest);
+  border: 5px solid var(--darkest);
   margin: 10px;
   height: 300px;
   background-color: var(--pale-silver);
+  color: var(--darkest);
 }
 .card-header {
   display: flex;
   justify-content: space-between;
-  background-color: var(--tan-dark);
+  background-color: var(--dark);
 }
 .favorite-button {
   border-radius: 50%;
   background-color: var(--tan-dark);
   border: none;
+}
+
+.btn{
+    background-color: var(--light);
 }
