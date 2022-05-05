@@ -116,21 +116,20 @@ h2 {
   flex-direction: row;
   justify-content: start;
 }
-#add-recipe-btn {
-  width: 100vw;
-  height: 4vh;
-  min-height: 60px;
-}
+
 
 /* Left Side - Favorites Side */
-.favorite-card-holder {
-  width: 34vw;
+.favorite-side-bar {
+  width: 10vw;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  border: 1px solid white;
 }
+.favorite-menu-item {
+  display: flex;
 
+}
 /* Card Styling */
 
 .recipe-card {
