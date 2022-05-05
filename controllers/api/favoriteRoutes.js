@@ -12,6 +12,15 @@ router.post('/', async (req, res) => {
     res.json(favoriteData)
 })
 
+router.delete('/:id', async (req, res) => {
+    const removeFavorite = await Favorite.destroy({
+        where: {
+            recipe_id: req.body.recipe_id
+        }
+    })
+    res.json(removeFavorite)
+})
+
 
 
 module.exports = router;

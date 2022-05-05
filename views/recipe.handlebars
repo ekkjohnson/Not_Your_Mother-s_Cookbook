@@ -16,7 +16,7 @@
 {{#each recipes as |recipe|}}
   <div class="recipe-card">
   <div class="card-header">
-    <h1>{{name}}</h1><button class="favorite-button btn btn-success" data-userid='{{user.id}}' data-recipeid='{{id}}'>Add Favorite</button>
+    <h1>{{name}}</h1><button class="favorite-button btn btn-success" data-recipeid='{{id}}'>Add Favorite</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
@@ -33,7 +33,7 @@
   {{#each favs as |favorite|}}
     <div class="recipe-card">
     <div class="card-header">
-      <h1>{{name}}</h1><button class="remove-button btn btn-danger" data-userid='{{user.id}}' data-recipeid='{{id}}'>Remove Favorite</button>
+      <h1>{{name}}</h1><button class="remove-button btn btn-danger" data-user='{{user}}' data-recipeid='{{id}}'>Remove Favorite</button>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">

@@ -27,7 +27,7 @@ router.get('/', withAuth, async (req, res) => {
     }
     const favs = favoriteList.map(fav => fav.get({ plain: true}))
     const recipes = recipeData.map((project) => project.get({ plain: true }))
-    console.log(favs);
+
     try {
         res.render('recipe', {
             recipes,
