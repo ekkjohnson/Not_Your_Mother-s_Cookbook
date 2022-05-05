@@ -13,7 +13,9 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/api/recipes');
+        return document.location.replace('/api/recipes');
+      } else {
+        return console.error('Incorrect Username or Password!')
       }
     }
   };
@@ -32,7 +34,9 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/api/recipes');
+        return document.location.replace('/api/recipes');
+      } else {
+        return console.error('Invalid Username or Password!')
       }
     }
   };
