@@ -9,12 +9,9 @@
 
 * {
   font-family: 'Kalam', cursive;
-  background-color: var(--dark);
 }
 
-body{
-    background-color: var(--dark);
-}
+
 #title{
     color: var(--light);
    border: var(--darkest);
@@ -27,7 +24,12 @@ header {
   color: var(--tan-light);
   padding-top: 5%;
 }
-
+html, body{
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--dark);
+}
 #user-logout {
   border: 2px solid #0a0908;
   color: #ccc5b9;
@@ -120,7 +122,9 @@ h2 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-
+h5 {
+  font-family: "Permanent Marker", cursive;
+}
 
 
 /* Recipe Page Styling */
@@ -174,7 +178,7 @@ h2 {
 }
 /* Card Styling */
 .recipePage{
-    height: 100vh;
+    height: 100%;
     background-color: var(--dark)
 }
 .recipe-card {
