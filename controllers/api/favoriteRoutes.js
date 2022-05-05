@@ -6,12 +6,22 @@ const withAuth = require('../../utils/auth')
 router.post('/', async (req, res) => {
 
     const favoriteData = await Favorite.create({
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         recipe_id: req.body.recipe_id
     })
-    console.log(favoriteData);
     res.json(favoriteData)
 })
+
+router.delete('/:id', async (req, res) => {
+    const removeFavorite = await Favorite.destroy({
+        where: {
+            user_id: req.session.user_id,
+            recipe_id: req.body.recipe_id
+        }
+    })
+    res.json(removeFavorite)
+})
+
 
 
 module.exports = router;
