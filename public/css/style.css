@@ -22,12 +22,6 @@ section {
   color: black;
 }
 
-#password-login, #password-signup {
-  margin-left: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 #username-login, #password-login {
   border-radius: 5px;
 
