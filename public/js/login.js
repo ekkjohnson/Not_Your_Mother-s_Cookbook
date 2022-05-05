@@ -14,8 +14,6 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/api/recipes');
-      } else {
-        alert(response.statusText);
       }
     }
   };
@@ -35,8 +33,6 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/api/recipes');
-      } else {
-        alert(response.statusText);
       }
     }
   };

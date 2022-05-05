@@ -17,7 +17,7 @@ const favoriteRecipe = async (e) => {
             body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        document.location.replace('/api/recipes')
+        return document.location.replace('/api/recipes')
     }
 }
 
@@ -31,7 +31,7 @@ const removeFavorite = async (e) => {
             body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        document.location.replace('/api/recipes')
+        return document.location.replace('/api/recipes')
     }   
     } catch (err) {
         console.error(err);
