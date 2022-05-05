@@ -7,10 +7,10 @@ const addNewRecipe = async () => {
         body: JSON.stringify({ name, ingredients, directions }),
         headers: { 'Content-Type': 'application/json' }
     })
-    if (newRecipe) {
-        return document.location.replace('/api/recipes')
-    } else {
-        return console.error('Failed to create recipe.')
-    }
+    // if (newRecipe) {
+    return document.location.replace('/api/recipes')
+    // } else {
+        // return console.error('Failed to create recipe.')
+    // }
 }
 document.querySelector(".recipe-form").addEventListener("submit", addNewRecipe)
