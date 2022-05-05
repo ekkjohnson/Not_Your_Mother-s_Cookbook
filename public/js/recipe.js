@@ -6,16 +6,16 @@ const addRecipePage = async () => {
 
 
 const favoriteRecipe = async (e) => {
-    const user_id = e.target.dataset.userid
+
     const recipe_id = e.target.dataset.recipeid
-    
-    if (user_id && recipe_id) {
+
+    if (recipe_id) {
         const newFavorite = await fetch('/api/favorites', {
             method: 'POST',
-            body: JSON.stringify({ user_id, recipe_id }),
+            body: JSON.stringify({ recipe_id }),
             headers: { 'Content-Type': 'application/json' }
         })
-        console.log(newFavorite);
+        document.location.replace('/api/recipes')
     }else {
         console.log('notta');
     }

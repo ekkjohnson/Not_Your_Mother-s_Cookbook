@@ -1,42 +1,44 @@
-<div class="card">
+<div class="recipe-title">
 <h3>Recipes</h3>
-</div>
 <button class="btn btn-outline-primary" id="add-recipe-btn" type="recipe">Add Recipe</button>
-<div class="container">{{recipeData}}</div>
-<section class="flex-row justify-center card-holder">
+</div>
+{{!-- Open Recipe Main Content --}}
+<div class="recipe-main-content">
+  {{!-- Recipe Side --}}
+  <section class="recipe-card-holder">
 {{#each recipes as |recipe|}}
   <div class="card recipe-card">
   <div class="card-header">
-    {{name}}{{id}} <button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>favorite</button>
+    {{name}}<button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>Add Favorite</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <p>Ingredients: {{ingredients}}</p>
       <p>Directions: {{directions}}</p>
-      <footer class="blockquote-footer">Submitted by: {{user.username}}{{user.id}}</footer>
+      <footer class="blockquote-footer">Submitted by: {{user.username}}</footer>
     </blockquote>
   </div>
 </div>
 {{/each}}
 </section>
-<section class="flex-row justify-center card-holder">
-{{#each favs as |favorite|}}
-  <div class="card recipe-card">
-  <div class="card-header">
-    {{name}}{{id}} <button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>favorite</button>
+{{!-- Favorites Side --}}
+  <section class="favorite-card-holder">
+  {{#each favs as |favorite|}}
+    <div class="card recipe-card">
+    <div class="card-header">
+      {{name}}<button class="favorite-button" data-userid='{{user.id}}' data-recipeid='{{id}}'>Remove Favorite</button>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Ingredients: {{ingredients}}</p>
+        <p>Directions: {{directions}}</p>
+        <footer class="blockquote-footer">Submitted by: {{user.username}}</footer>
+      </blockquote>
+    </div>
   </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Ingredients: {{ingredients}}</p>
-      <p>Directions: {{directions}}</p>
-      <footer class="blockquote-footer">Submitted by: {{user.username}}{{user.id}}</footer>
-    </blockquote>
-  </div>
-</div>
-{{/each}}
-</section>
-</div>
- 
-</div>
+  {{/each}}
+  </section>
+  {{!-- Closing Recipe Main Content --}}
+</div> 
 
 <script src="/js/recipe.js"></script>
