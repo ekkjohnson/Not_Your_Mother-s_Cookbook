@@ -22,7 +22,9 @@
 {{#each recipes as |recipe|}}
   <div class="recipe-card" id="item-card-{{id}}">
   <div class="card-header">
-    <h1>{{name}}</h1><button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>⭐</button>
+    <h1>{{name}}</h1>
+    <button class="favorite-button btn btn-primary" data-recipeid='{{id}}'>Add Favorite</button>
+    <button class="delete-button btn btn-primary" data-recipeid='{{id}}'>Delete Recipe</button>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
