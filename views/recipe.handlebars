@@ -7,7 +7,7 @@
   <button class="btn btn-success" id="add-recipe-btn" type="recipe">Add Recipe</button>
      {{#each favs as |favorite|}}
      <div class="favorite-menu-item">
-      <a id="item-{{id}}" href="#item-card-{{id}}" class="link"><button>
+      <a id="item-{{id}}" href="#item-card-{{id}}" class="link"><button class="btn favorite-link">
         {{name}}
       <button class="remove-button btn" data-user='{{user}}' data-recipeid='{{id}}'>❌</button>
       </button></a>

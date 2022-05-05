@@ -108,18 +108,27 @@ h2 {
 
 /* Left Side - Favorites Side */
 .favorite-side-bar {
-  width: 10vw;
+  width: 15vw;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   border: 1px solid white;
   justify-content: start;
+  background-color: var(--pale-silver);
 }
 .favorite-menu-item {
-  width: 10vw;
+  width: 15vw;
   border: 1px solid red;
   display: flex;
+  justify-content: space-between;
 
+}
+.favorite-menu-item a {
+  width: 100%;
+}
+.favorite-link {
+  width: 80%;
+  background-color: var(--pale-silver);
 }
 .remove-button {
   width: 20%;
